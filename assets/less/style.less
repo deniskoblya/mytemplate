@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import "normalize";
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 16px;
+    color: black;
+
+}
+
+.dn {
+    display: none;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    box-sizing: border-box;
+}
+
+// FLEXBOX HELP CLASS ---------------------------------
+.df {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.fr {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+}
+
+.fc {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.jb {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+}
+
+.jc {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+}
+
+.je {
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
+    justify-content: flex-end;
+}
+
+.vt {
+    -webkit-box-align: start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+}
+
+.vc {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+.vb {
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+}
+
+.itop {
+    -ms-flex-item-align: start;
+    align-self: flex-start;
+}
+
+.icenter {
+    -ms-flex-item-align: center;
+    align-self: center;
+}
+
+.ibottom {
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+}
+
+// END FLEXBOX HELP CLASS ---------------------------------
+.anim {
+    -webkit-transition: .3s all ease;
+    transition: .3s all ease;
+}
+
+.dfc {
+    .df;
+    .vc;
+    .jc;
+}
+
+
+.tabs__content {
+    display: none;
+    /* по умолчанию прячем все блоки */
+}
+
+.tabs__content.active {
+    display: block;
+    /* по умолчанию показываем нужный блок */
+}
+
+
+#burger-menu {
+    display: none;
+    .fc;
+    .jc;
+    .vc;
+    position: absolute;
+    right: -6px;
+    top: 7px;
+    box-sizing: border-box;
+    outline: none;
+    cursor: pointer;
+    border: none;
+    background: none;
+    width: 44px;
+    height: 23px;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    z-index: 1;
+
+    &.active {
+        .box_item1 {
+            -webkit-transform: translateX(0) translateY(9px) rotate(45deg);
+            transform: translateX(0) translateY(9px) rotate(45deg);
+        }
+
+        .box_item2 {
+            opacity: 0;
+        }
+
+        .box_item3 {
+            -webkit-transform: translateX(0) translateY(-9px) rotate(-45deg);
+            transform: translateX(0) translateY(-9px) rotate(-45deg);
+        }
+    }
+
+    .box {
+        width: 44px;
+        height: 2px;
+        background: #333333;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        .anim;
+    }
+}
+
+.show_mobile_menu {
+    opacity: 1 !important;
+    left: 0 !important;
+}
+
+#mobile-menu {
+    padding: 15px;
+    box-sizing: border-box;
+    opacity: 0;
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 100%;
+    height: 100vh !important;
+    background: white;
+    .df;
+    .jc;
+    .anim;
+    z-index: 1;
+
+
+    ul {
+        padding-left: 0;
+        width: 300px;
+        .df;
+        .fc;
+        .vc;
+        list-style: none;
+
+        a {
+            text-decoration: none;
+            font-size: 20px;
+            font-weight: 700;
+            padding: 10px 0;
+            display: block;
+            color: #229fd9;
+            position: relative;
+        }
+    }
+}
+
+.center {
+    text-align: center;
+}
+
+@import "modal";
+
+
+// 992px - 1199px
+@media (min-width: 992px) and (max-width: 1199px) {
+    .container {
+        width: 970px !important;
+    }
+
+    body,
+    section,
+    footer {
+        width: 100% !important;
+        overflow-x: hidden;
+    }
+}
+
+// 768px - 991px
+@media (min-width: 768px) and (max-width: 991px) {
+    .container {
+        width: 750px !important;
+    }
+
+    body,
+    section,
+    footer {
+        width: 100% !important;
+        overflow-x: hidden;
+    }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {}
+
+// 0px - 767px
+@media (max-width: 767px) {
+
+    #burger-menu {
+        .df;
+        .jb;
+        .fc;
+    }
+
+    .container {
+        width: 320px !important;
+    }
+
+    body,
+    section,
+    footer {
+        width: 100% !important;
+        overflow-x: hidden;
+    }
+}
+
+
+
+@media (max-width: 320px) {
+
+    header,
+    section,
+    footer {
+        width: 320px !important;
+    }
+}
