@@ -1,58 +1,58 @@
 @charset "UTF-8";
 
 @-ms-viewport {
-    width: device-width;
-    initial-scale: 1
+  width: device-width;
+  initial-scale: 1;
 }
 
 @-moz-viewport {
-    width: device-width;
-    initial-scale: 1
+  width: device-width;
+  initial-scale: 1;
 }
 
 @-webkit-viewport {
-    width: device-width;
-    initial-scale: 1
+  width: device-width;
+  initial-scale: 1;
 }
 
 *,
 :after,
 :before {
-    box-sizing: border-box
+  box-sizing: border-box;
 }
 
 html {
-    height: 100%
+  height: 100%;
 }
 
 body,
 p {
-    margin: 0
+  margin: 0;
 }
 
 body {
-    position: relative;
-    min-height: 100%;
-    overflow: auto;
-    overflow-x: hidden;
-    padding: 0;
-    word-wrap: break-word;
-    text-decoration-skip: objects;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    -ms-text-size-adjust: 100%;
-    -moz-text-size-adjust: 100%;
-    -webkit-text-size-adjust: 100%;
-    -webkit-tap-highlight-color: transparent;
-    -webkit-overflow-scrolling: touch;
-    -ms-touch-action: manipulation;
-    touch-action: manipulation
+  position: relative;
+  min-height: 100%;
+  overflow: auto;
+  overflow-x: hidden;
+  padding: 0;
+  word-wrap: break-word;
+  text-decoration-skip: objects;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-overflow-scrolling: touch;
+  -ms-touch-action: manipulation;
+  touch-action: manipulation;
 }
 
 audio,
 canvas,
 span {
-    display: inline-block
+  display: inline-block;
 }
 
 a,
@@ -65,49 +65,49 @@ legend,
 optgroup,
 select,
 textarea {
-    font: inherit;
-    color: inherit;
-    line-height: inherit;
-    text-transform: inherit;
-    text-shadow: inherit;
-    border: 0;
-    background: 0 0;
-    box-shadow: none;
-    border-radius: 0;
-    margin: 0;
-    padding: 0
+  font: inherit;
+  color: inherit;
+  line-height: inherit;
+  text-transform: inherit;
+  text-shadow: inherit;
+  border: 0;
+  background: 0 0;
+  box-shadow: none;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
 }
 
-[type=button],
-[type=submit],
+[type="button"],
+[type="submit"],
 a,
 button {
-    transition: color .25s, background .25s, opacity .25s
+  transition: color 0.25s, background 0.25s, opacity 0.25s;
 }
 
 a {
-    cursor: pointer;
-    text-decoration: none;
-    -webkit-text-decoration-skip: none
+  cursor: pointer;
+  text-decoration: none;
+  -webkit-text-decoration-skip: none;
 }
 
 button {
-    overflow: visible;
-    -webkit-font-smoothing: inherit;
-    letter-spacing: inherit
+  overflow: visible;
+  -webkit-font-smoothing: inherit;
+  letter-spacing: inherit;
 }
 
 p {
-    -ms-hyphens: auto;
-    -moz-hyphens: auto;
-    -webkit-hyphens: auto;
-    hyphens: auto;
-    overflow: hidden
+  -ms-hyphens: auto;
+  -moz-hyphens: auto;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+  overflow: hidden;
 }
 
 b,
 strong {
-    font-weight: 700
+  font-weight: 700;
 }
 
 audio,
@@ -118,10 +118,10 @@ img,
 object,
 svg,
 video {
-    border: 0;
-    vertical-align: middle;
-    max-width: 100%;
-    height: auto
+  border: 0;
+  vertical-align: middle;
+  max-width: 100%;
+  height: auto;
 }
 
 embed,
@@ -129,25 +129,25 @@ iframe,
 img,
 object,
 video {
-    display: block;
-    margin: auto
+  display: block;
+  margin: auto;
 }
 
 img {
-    image-rendering: optimizeQuality
+  image-rendering: optimizeQuality;
 }
 
 svg {
-    color: inherit
+  color: inherit;
 }
 
 svg:not(:root) {
-    overflow: hidden
+  overflow: hidden;
 }
 
 progress {
-    vertical-align: baseline;
-    border: 0
+  vertical-align: baseline;
+  border: 0;
 }
 
 h1,
@@ -156,39 +156,39 @@ h3,
 h4,
 h5,
 h6 {
-    text-rendering: optimizeLegibility;
-    font: inherit;
-    color: inherit;
-    margin: 0
+  text-rendering: optimizeLegibility;
+  font: inherit;
+  color: inherit;
+  margin: 0;
 }
 
 ol,
 ul {
-    margin: 0;
-    padding: 0;
-    list-style: none
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 button,
 button > *,
 input,
 select {
-    display: inline-block;
-    vertical-align: middle
+  display: inline-block;
+  vertical-align: middle;
 }
 
-[type=button],
-[type=checkbox],
-[type=radio],
-[type=range],
-[type=reset],
-[type=submit],
+[type="button"],
+[type="checkbox"],
+[type="radio"],
+[type="range"],
+[type="reset"],
+[type="submit"],
 button,
 label,
 select,
 summary {
-    user-select: none;
-    cursor: pointer
+  user-select: none;
+  cursor: pointer;
 }
 
 ::-webkit-inner-spin-button,
@@ -196,136 +196,134 @@ summary {
 ::-webkit-search-cancel-button,
 ::-webkit-search-decoration,
 ::-webkit-slider-thumb,
-[type=button],
-[type=radio],
-[type=range],
-[type=search],
-[type=submit],
+[type="button"],
+[type="radio"],
+[type="range"],
+[type="search"],
+[type="submit"],
 select {
-    -webkit-appearance: none
+  -webkit-appearance: none;
 }
 
 ::-webkit-file-upload-button {
-    -webkit-appearance: button;
-    font: inherit
+  -webkit-appearance: button;
+  font: inherit;
 }
 
 ::-webkit-contacts-auto-fill-button,
 ::-webkit-credentials-auto-fill-button {
-    visibility: hidden;
-    pointer-events: none;
-    position: absolute;
-    right: 0
+  visibility: hidden;
+  pointer-events: none;
+  position: absolute;
+  right: 0;
 }
 
 :-webkit-autofill {
-    box-shadow: inset 0 0 0 1000px #fff
+  box-shadow: inset 0 0 0 1000px #fff;
 }
 
-::-webkit-details-marker {
-    display: none
+::marker {
+  display: none;
 }
 
-[type=radio] {
-    -webkit-appearance: radio
+[type="radio"] {
+  -webkit-appearance: radio;
 }
 
-[type=number] {
-    -moz-appearance: textfield
+[type="number"] {
+  -moz-appearance: textfield;
 }
 
 ::-ms-clear,
 ::-ms-reveal {
-    display: none
+  display: none;
 }
 
 input,
 textarea {
-    width: 100%
+  width: 100%;
 }
 
 input {
-    text-overflow: ellipsis
+  text-overflow: ellipsis;
 }
 
 textarea {
-    overflow: auto;
-    resize: none
+  overflow: auto;
+  resize: none;
 }
 
 :active,
 :focus,
 :hover {
-    outline: 0;
-    outline-offset: 0
+  outline: 0;
+  outline-offset: 0;
 }
 
 :disabled {
-    pointer-events: none;
-    cursor: not-allowed;
-    -webkit-text-fill-color: initial
+  pointer-events: none;
+  cursor: not-allowed;
+  -webkit-text-fill-color: initial;
 }
 
 ::-moz-focus-inner,
 ::-moz-focus-outer {
-    border: 0;
-    padding: 0
+  border: 0;
+  padding: 0;
 }
 
 ::placeholder {
-    opacity: 1;
-    color: inherit
+  opacity: 1;
+  color: inherit;
 }
 
 ::-moz-placeholder {
-    opacity: 1;
-    color: inherit
+  opacity: 1;
+  color: inherit;
 }
 
 table {
-    border-spacing: 0;
-    border-collapse: collapse
+  border-spacing: 0;
+  border-collapse: collapse;
 }
 
 td,
 th {
-    padding: 0;
-    text-align: center
+  padding: 0;
+  text-align: center;
 }
 
-
-
 input::-moz-placeholder {
-    text-indent: 0px;
-    transition: text-indent 0.6s ease;
+  text-indent: 0px;
+  transition: text-indent 0.6s ease;
 }
 
 input:-moz-placeholder {
-    text-indent: 0px;
-    transition: text-indent 0.6s ease;
+  text-indent: 0px;
+  transition: text-indent 0.6s ease;
 }
 
 input:-ms-input-placeholder {
-    text-indent: 0px;
-    transition: text-indent 0.6s ease;
+  text-indent: 0px;
+  transition: text-indent 0.6s ease;
 }
 
 input:focus::-webkit-input-placeholder {
-    text-indent: 500px;
-    transition: text-indent 0.6s ease;
+  text-indent: 500px;
+  transition: text-indent 0.6s ease;
 }
 
 input:focus::-moz-placeholder {
-    text-indent: 500px;
-    transition: text-indent 0.6s ease;
+  text-indent: 500px;
+  transition: text-indent 0.6s ease;
 }
 
 input:focus:-moz-placeholder {
-    text-indent: 500px;
-    transition: text-indent 0.6s ease;
+  text-indent: 500px;
+  transition: text-indent 0.6s ease;
 }
 
 input:focus:-ms-input-placeholder {
-    text-indent: 500px;
-    transition: text-indent 0.6s ease;
+  text-indent: 500px;
+  transition: text-indent 0.6s ease;
 }

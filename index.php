@@ -31,8 +31,7 @@
 </head>
 
 <body>
-    <div class="wrapper">
-       <b>Если показывает ошибку в lessc.inc.php то нужно понизить версию PHP до 7.3</b>
+    <div class="wrapper">       
         <div id="mobile-menu">
             <div class="block">
                 <ul>
@@ -46,7 +45,7 @@
 
         <header>
             <div class="container">
-                <div class="block">
+                <div class="block df jb">
                     <a class="logo" href="">
                         LOGO
                     </a>
@@ -56,14 +55,7 @@
                             <div class="box box_item1"></div>
                             <div class="box box_item2"></div>
                             <div class="box box_item3"></div>
-                        </button>
-                        <!-- Кнопка Мобильного Меню -->
-                        <ul>
-                            <li><a href=""><span>Link</span></a></li>
-                            <li><a href=""><span>Link</span></a></li>
-                            <li><a href=""><span>Link</span></a></li>
-                            <li><a href=""><span>Link</span></a></li>
-                        </ul>
+                        </button>                        
                     </div>
                 </div>
             </div>
@@ -90,9 +82,12 @@
                 <hr>
                 <button class="md-trigger" data-modal="modal-1">Модальное окно</button>
                 <hr>
-                <div class="clock"></div>
+                
+                
             </div>
+
         </section>
+        
     </div>
     <div class="md-modal md-effect-1" id="modal-1">
         <div class="md-content">
@@ -117,7 +112,6 @@
     <script src="./assets/js/modalEffects.js"></script>
     <script>
         var polyfilter_scriptpath = './assets/js/';
-
     </script>
     <script src="./assets/js/cssParser.js"></script>
     <script src="./assets/js/css-filters-polyfill.js"></script>
@@ -127,6 +121,9 @@
     <script src="./assets/js/jquery.validate.min.js"></script>
     <script src="./assets/js/jquery.maskedinput.js"></script>
     <script src="./assets/js/wow.min.js"></script>
+
+    <!-- https://github.com/verlok/vanilla-lazyload#-getting-started---html -->
+    <script src="./assets/js/lazyload.js"></script> 
 
     <!-- Counter -->
     <script src="./assets/js/counter/jquery.cookie.js"></script>
@@ -139,13 +136,15 @@
 
     </script>
     <!-- End Counter -->
-
+    <script src="https://www.youtube.com/iframe_api"></script>
     <script src="./assets/js/script.js"></script>
 
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <link rel="stylesheet" href="./assets/css/swiper/swiper-bundle.min.css">
+    <script src="./assets/js/swiper/swiper-bundle.min.js"></script>
 
     <script>
+    var lazyLoadInstance = new LazyLoad({
+});
         /*
         var swiper = new Swiper('.slider', {
             observer: true,
