@@ -2,131 +2,130 @@
 var burgerCtr = document.querySelector("#burger-menu");
 var menuCtr = document.querySelector("#mobile-menu");
 burgerCtr.addEventListener("click", function () {
-  this.classList.toggle("active");
-  menuCtr.classList.toggle("show_mobile_menu");
+    this.classList.toggle("active");
+    menuCtr.classList.toggle("show_mobile_menu");
 });
 // конец бургера
 
 // ---------------------------------------------------------------------
 
 $(document).click(function (e) { // скрипт для клика по элементу и вне его
-  if ($(e.target).closest(".pop-up").length) {
-    // вместо .pop-up ставим свой клас
-    // клик по элементу .pop-up
-    return;
-  }
-  // условие по клику снаружи элемента
+    if ($(e.target).closest(".pop-up").length) {
+        // вместо .pop-up ставим свой клас
+        // клик по элементу .pop-up
+        return;
+    }
+    // условие по клику снаружи элемента
 });
 
 
 // ---------------------------------------------------------------------
 
 $(document).ready(function () {
-  $(".phone").mask("+380 (99) 999-99-99"); // маска для всех инпутов с классом .phone
+    $(".phone").mask("+380 (99) 999-99-99"); // маска для всех инпутов с классом .phone
 
-  // ---------------------------------------------------------------------
+    // ---------------------------------------------------------------------
 
-  // AJAX FORM
-  $(".send-form").click(function () {
-    // указываем класс по которому будет идти клик
-    var form = $(this).closest("form"); // заганяем ближайшую форму в переменную
+    // AJAX FORM
+    $(".send-form").click(function () {
+        // указываем класс по которому будет идти клик
+        var form = $(this).closest("form"); // заганяем ближайшую форму в переменную
 
-    if (form.valid()) {
-      // проверяем форму на валидность
-      form.css("opacity", ".5"); // сделаем ее полупрозрачной на момент
-      var actUrl = form.attr("action");
+        if (form.valid()) {
+            // проверяем форму на валидность
+            form.css("opacity", ".5"); // сделаем ее полупрозрачной на момент
+            var actUrl = form.attr("action");
 
-      $.ajax({
-        url: actUrl,
-        type: "post",
-        dataType: "html",
-        data: form.serialize(),
-        success: function (data) {
-          form.html(data);
-          form.css("opacity", "1"); // вернем видимость
-          //form.find('.status').html('форма отправлена успешно');
-          //$('#myModal').modal('show') // для бутстрапа
-        },
-        error: function () {
-          form.find(".status").html("серверная ошибка");
-        },
-      });
-    }
-  });
-  // END AJAX FORM
-  
-  // ---------------------------------------------------------------------
-  
-  // начало скрипт табов //
-  $("ul.tabs__caption").on("click", "li:not(.active)", function () {
-    $(this)
-      .addClass("active")
-      .siblings()
-      .removeClass("active")
-      .closest("div.tabs")
-      .find("div.tabs__content")
-      .removeClass("active")
-      .eq($(this).index())
-      .addClass("active");
-  });
-  // конец скрипт табов //
-
-  // ---------------------------------------------------------------------
-
-  //  Плавный скролл к секции. Пример: <a href="#" class="scroll" data-target=".slide-1">Slide</a>
-  $(".scroll").click(function (e) {
-    e.preventDefault();
-    var target = $(this).data("target");
-
-    // на случай закрытия бургер меню: $('#burger-menu').click();
-
-    $("html, body").animate(
-      {
-        scrollTop: $(target).offset().top - 30,
-      },
-      400
-    );
-  });
-
-  // ---------------------------------------------------------------------
-
-  // Counter -----------------------
-  /*
-    var timeSpend = 86400000 * 50;
-
-    if ($.cookie('firstOpen') != undefined) {
-        var interval = ((new Date()).getTime() - $.cookie('firstOpen'));
-        if (interval > timeSpend) {
-            timeSpend = 0;
-        } else {
-            timeSpend -= interval;
+            $.ajax({
+                url: actUrl,
+                type: "post",
+                dataType: "html",
+                data: form.serialize(),
+                success: function (data) {
+                    form.html(data);
+                    form.css("opacity", "1"); // вернем видимость
+                    //form.find('.status').html('форма отправлена успешно');
+                    //$('#myModal').modal('show') // для бутстрапа
+                },
+                error: function () {
+                    form.find(".status").html("серверная ошибка");
+                },
+            });
         }
-    } else {
-        $.cookie('firstOpen', (new Date()).getTime());
-    }
-
-    $('.clock').countdown({
-        until: timeSpend / 1000,
-        format: 'DHMS'
     });
-    */
+    // END AJAX FORM
 
-  /*
-    //var now = new Date();
-    //var tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate()+1);
-    
-    var now = parseInt(nowDateTime);
-    var end = parseInt(endDateTime);
-    
-    if ( now > end ) {
-    	hideBlock();
-    }
+    // ---------------------------------------------------------------------
 
-    var diff = end - now;
-    var timeSpend = Math.round(diff);
+    // начало скрипт табов //
+    $("ul.tabs__caption").on("click", "li:not(.active)", function () {
+        $(this)
+            .addClass("active")
+            .siblings()
+            .removeClass("active")
+            .closest("div.tabs")
+            .find("div.tabs__content")
+            .removeClass("active")
+            .eq($(this).index())
+            .addClass("active");
+    });
+    // конец скрипт табов //
 
-    $('.clock').countdown({until: timeSpend, format: 'DHM', onExpiry: hideBlock});
-    */
+    // ---------------------------------------------------------------------
+
+    //  Плавный скролл к секции. Пример: <a href="#" class="scroll" data-target=".slide-1">Slide</a>
+    $(".scroll").click(function (e) {
+        e.preventDefault();
+        var target = $(this).data("target");
+
+        // на случай закрытия бургер меню: $('#burger-menu').click();
+
+        $("html, body").animate({
+                scrollTop: $(target).offset().top - 30,
+            },
+            400
+        );
+    });
+
+    // ---------------------------------------------------------------------
+
+    // Counter -----------------------
+    /*
+      var timeSpend = 86400000 * 50;
+
+      if ($.cookie('firstOpen') != undefined) {
+          var interval = ((new Date()).getTime() - $.cookie('firstOpen'));
+          if (interval > timeSpend) {
+              timeSpend = 0;
+          } else {
+              timeSpend -= interval;
+          }
+      } else {
+          $.cookie('firstOpen', (new Date()).getTime());
+      }
+
+      $('.clock').countdown({
+          until: timeSpend / 1000,
+          format: 'DHMS'
+      });
+      */
+
+    /*
+      //var now = new Date();
+      //var tomorrow = new Date(now.getFullYear(), now.getMonth(), now.getDate()+1);
+      
+      var now = parseInt(nowDateTime);
+      var end = parseInt(endDateTime);
+      
+      if ( now > end ) {
+      	hideBlock();
+      }
+
+      var diff = end - now;
+      var timeSpend = Math.round(diff);
+
+      $('.clock').countdown({until: timeSpend, format: 'DHM', onExpiry: hideBlock});
+      */
 });
 
 /*
@@ -137,18 +136,18 @@ var screeHeight = $(window).height();
 var offSet = 200;
 
 if (screeHeight > 930) {
-  offSet = 200;
+    offSet = 200;
 } else {
-  offSet = (screeHeight * 200) / 900;
-  offSet = offSet.toFixed();
+    offSet = (screeHeight * 200) / 900;
+    offSet = offSet.toFixed();
 }
 
 wow = new WOW({
-  animateClass: "animated",
-  offset: offSet,
-  callback: function (box) {
-    console.log("WOW: animating <" + box.tagName.toLowerCase() + ">");
-  },
+    animateClass: "animated",
+    offset: offSet,
+    callback: function (box) {
+        console.log("WOW: animating <" + box.tagName.toLowerCase() + ">");
+    },
 });
 
 wow.init();
@@ -268,3 +267,4 @@ function onYouTubeIframeAPIReady() {
 function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
+*/
