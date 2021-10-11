@@ -20,7 +20,6 @@
 ?>
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -31,7 +30,7 @@
 </head>
 
 <body>
-    <div class="wrapper">       
+    <div class="wrapper">
         <div id="mobile-menu">
             <div class="block">
                 <ul>
@@ -42,7 +41,6 @@
                 </ul>
             </div>
         </div>
-
         <header>
             <div class="container">
                 <div class="block df jb">
@@ -55,19 +53,43 @@
                             <div class="box box_item1"></div>
                             <div class="box box_item2"></div>
                             <div class="box box_item3"></div>
-                        </button>                        
+                        </button>
                     </div>
                 </div>
             </div>
         </header>
+        <section class="sec1">
+            <div class="container">
 
+            </div>
+        </section>
+        <section class="sec2">
+            <div class="container">
+
+            </div>
+        </section>
+        <section class="sec3">
+            <div class="container">
+
+            </div>
+        </section>
+        <section class="sec4">
+            <div class="container">
+
+            </div>
+        </section>
+        <section class="sec5">
+            <div class="container">
+                
+            </div>
+        </section>
         <section class="help">
             <div class="container">
                 <div class="tabs">
                     <ul class="tabs__caption">
-                        <li class="active">Таб 1</li>
-                        <li class="">Таб 2</li>
-                        <li class="">Таб 3</li>
+                        <li class="tabs__item active">Таб 1</li>
+                        <li class="tabs__item">Таб 2</li>
+                        <li class="tabs__item">Таб 3</li>
                     </ul>
                     <div class="tabs__content active">
                         Контент 1 таба
@@ -82,82 +104,14 @@
                 <hr>
                 <button class="md-trigger" data-modal="modal-1">Модальное окно</button>
                 <hr>
-                
-                
             </div>
-
         </section>
-        
-    </div>
-    <div class="md-modal md-effect-1" id="modal-1">
-        <div class="md-content">
-            <h3>Модальные окна</h3>
-            <div>
-                <p> Это модальное окно. Вы можете выполнять следующие действия с ним:</p>
-                <ul>
-                    <li><strong>Читать:</strong> модальные окна, вероятно, несут важную текстовую информацию, так что не забудьте прочитать то, что в них написано.</li>
-                    <li><strong>Смотреть:</strong> модальные окна несут визуальную информацию, на которую приятно смотреть.</li>
-                    <li><strong>Закрыть:</strong> нажмите на кнопку, чтобы закрыть модальное окно.</li>
-                </ul>
-                <button class="md-close">Закрыть!</button>
+        <footer>
+            <div class="container">
+                <p>footer</p>
             </div>
-        </div>
+        </footer>
     </div>
-    <div class="md-overlay"></div><!-- the overlay element -->
 
-    <link rel="stylesheet" href="./assets/css/animate.css" type="text/css" />
-
-    <!-- FOR MODAL -->
-    <script src="./assets/js/classie.js"></script>
-    <script src="./assets/js/modalEffects.js"></script>
-    <script>
-        var polyfilter_scriptpath = './assets/js/';
-    </script>
-    <script src="./assets/js/cssParser.js"></script>
-    <script src="./assets/js/css-filters-polyfill.js"></script>
-    <!-- FOR MODAL -->
-
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
-    <script src="./assets/js/jquery.validate.min.js"></script>
-    <script src="./assets/js/jquery.maskedinput.js"></script>
-    <script src="./assets/js/wow.min.js"></script>
-
-    <!-- https://github.com/verlok/vanilla-lazyload#-getting-started---html -->
-    <script src="./assets/js/lazyload.js"></script> 
-
-    <!-- Counter -->
-    <script src="./assets/js/counter/jquery.cookie.js"></script>
-    <script src="./assets/js/counter/jquery.plugin.js"></script>
-    <script src="./assets/js/counter/jquery.countdown.js"></script>
-    <script src="./assets/js/counter/jquery.countdown-ru.js"></script>
-    <script>
-        var endDateTime = new Date();
-        var nowDateTime = new Date(3600 * 24 * 1000);
-
-    </script>
-    <!-- End Counter -->
-    <script src="https://www.youtube.com/iframe_api"></script>
-    <script src="./assets/js/script.js"></script>
-
-    <link rel="stylesheet" href="./assets/css/swiper/swiper-bundle.min.css">
-    <script src="./assets/js/swiper/swiper-bundle.min.js"></script>
-
-    <script>
-    var lazyLoadInstance = new LazyLoad({
-});
-        /*
-        var swiper = new Swiper('.slider', {
-            observer: true,
-            observeParents: true,
-            navigation: {
-                nextEl: '.btn-next',
-                prevEl: '.btn-prev',
-            },
-        });
-        
-        */
-
-    </script>
-</body>
-
-</html>
+    <?php require "modal.php"?>
+    <?php require "footer.php"?>

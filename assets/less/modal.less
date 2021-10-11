@@ -1,4 +1,4 @@
-/* General styles for the modal */
+/* General styles for the modal  https://ruseller.com/lessons/les1782/demo/index.html*/
 
 /* 
 Styles for the html/body for special modal where we want 3d effects
@@ -17,8 +17,8 @@ perspective effects (not including the modals and the overlay).
     perspective: 600px;
 }
 
-
 .md-modal {
+    opacity: 0;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -32,9 +32,11 @@ perspective effects (not including the modals and the overlay).
     backface-visibility: hidden;
     -webkit-transform: translateX(-50%) translateY(-50%);
     transform: translateX(-50%) translateY(-50%);
+    .anim;
 }
 
 .md-show {
+    opacity: 1;
     visibility: visible;
 }
 
@@ -52,7 +54,7 @@ perspective effects (not including the modals and the overlay).
     transition: all 0.3s;
 }
 
-.md-show ~ .md-overlay {
+.md-show~.md-overlay {
     opacity: 1;
     visibility: visible;
 }
@@ -77,24 +79,24 @@ perspective effects (not including the modals and the overlay).
     border-radius: 3px 3px 0 0;
 }
 
-.md-content > div {
+.md-content>div {
     padding: 15px 40px 30px;
     margin: 0;
     font-weight: 300;
     font-size: 1.15em;
 }
 
-.md-content > div p {
+.md-content>div p {
     margin: 0;
     padding: 10px 0;
 }
 
-.md-content > div ul {
+.md-content>div ul {
     margin: 0;
     padding: 0 0 30px 20px;
 }
 
-.md-content > div ul li {
+.md-content>div ul li {
     padding: 5px 0;
 }
 
@@ -158,7 +160,7 @@ perspective effects (not including the modals and the overlay).
     opacity: 0;
 }
 
-.md-show.md-effect-4 ~ .md-overlay,
+.md-show.md-effect-4~.md-overlay,
 .md-effect-4 .md-content {
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
@@ -328,7 +330,7 @@ perspective effects (not including the modals and the overlay).
     transition: all 0.3s;
 }
 
-.md-show.md-effect-12 ~ .md-overlay {
+.md-show.md-effect-12~.md-overlay {
     background: #e74c3c;
 }
 
@@ -440,11 +442,11 @@ perspective effects (not including the modals and the overlay).
 }
 
 /* Effect 16:  Blur */
-.md-show.md-effect-16 ~ .md-overlay {
+.md-show.md-effect-16~.md-overlay {
     background: rgba(180, 46, 32, 0.5);
 }
 
-.md-show.md-effect-16 ~ .container {
+.md-show.md-effect-16~.container {
     -webkit-filter: blur(3px);
     -moz-filter: blur(3px);
     filter: blur(3px);
@@ -456,7 +458,7 @@ perspective effects (not including the modals and the overlay).
     opacity: 0;
 }
 
-.md-show.md-effect-16 ~ .container,
+.md-show.md-effect-16~.container,
 .md-effect-16 .md-content {
     -webkit-transition: all 0.3s;
     transition: all 0.3s;
@@ -469,7 +471,7 @@ perspective effects (not including the modals and the overlay).
 }
 
 /* Effect 17:  Slide in from bottom with perspective on container */
-.md-show.md-effect-17 ~ .container {
+.md-show.md-effect-17~.container {
     height: 100%;
     overflow: hidden;
     -webkit-transition: -webkit-transform 0.3s;
@@ -478,8 +480,8 @@ perspective effects (not including the modals and the overlay).
     transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
-.md-show.md-effect-17 ~ .container,
-.md-show.md-effect-17 ~ .md-overlay {
+.md-show.md-effect-17~.container,
+.md-show.md-effect-17~.md-overlay {
     -webkit-transform: rotateX(-2deg);
     transform: rotateX(-2deg);
     -webkit-transform-origin: 50% 0%;
@@ -503,19 +505,19 @@ perspective effects (not including the modals and the overlay).
 }
 
 /* Effect 18:  Slide from right with perspective on container */
-.md-show.md-effect-18 ~ .container {
+.md-show.md-effect-18~.container {
     height: 100%;
     overflow: hidden;
 }
 
-.md-show.md-effect-18 ~ .md-overlay {
+.md-show.md-effect-18~.md-overlay {
     background: rgba(143, 27, 15, 0.8);
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
 }
 
-.md-show.md-effect-18 ~ .container,
-.md-show.md-effect-18 ~ .md-overlay {
+.md-show.md-effect-18~.container,
+.md-show.md-effect-18~.md-overlay {
     -webkit-transform-style: preserve-3d;
     -webkit-transform-origin: 0% 50%;
     -webkit-animation: rotateRightSideFirst 0.5s forwards ease-in;
@@ -567,18 +569,18 @@ perspective effects (not including the modals and the overlay).
 }
 
 /* Effect 19:  Slip in from the top with perspective on container */
-.md-show.md-effect-19 ~ .container {
+.md-show.md-effect-19~.container {
     height: 100%;
     overflow: hidden;
 }
 
-.md-show.md-effect-19 ~ .md-overlay {
+.md-show.md-effect-19~.md-overlay {
     -webkit-transition: all 0.5s;
     transition: all 0.5s;
 }
 
-.md-show.md-effect-19 ~ .container,
-.md-show.md-effect-19 ~ .md-overlay {
+.md-show.md-effect-19~.container,
+.md-show.md-effect-19~.md-overlay {
     -webkit-transform-style: preserve-3d;
     -webkit-transform-origin: 50% 100%;
     -webkit-animation: OpenTop 0.5s forwards ease-in;
