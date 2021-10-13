@@ -925,6 +925,46 @@ input:focus:-ms-input-placeholder {
 .yt-toggle-play:hover .play-icn {
   color: #ff0000;
 }
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #188642;
+}
+::-webkit-scrollbar-thumb {
+  background: #772121;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+.tu {
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 50px solid #555;
+}
+.tb {
+  width: 0;
+  height: 0;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  border-bottom: 50px solid #555;
+}
+.tl {
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-right: 50px solid #555;
+  border-bottom: 25px solid transparent;
+}
+.tr {
+  width: 0;
+  height: 0;
+  border-top: 25px solid transparent;
+  border-left: 50px solid #555;
+  border-bottom: 25px solid transparent;
+}
 .dn {
   display: none;
 }
@@ -988,6 +1028,9 @@ input:focus:-ms-input-placeholder {
 }
 .hflip {
   transform: scale(-1,1);
+}
+.r50 {
+  border-radius: 50%;
 }
 #burger-menu {
   display: none;
@@ -1081,6 +1124,52 @@ input:focus:-ms-input-placeholder {
   display: block;
   color: #229fd9;
   position: relative;
+}
+.custom-select {
+  position: relative;
+}
+.custom-select select {
+  display: none;
+}
+.custom-select .select-selected {
+  background-color: DodgerBlue;
+}
+.custom-select .select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+.custom-select .select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+.custom-select .select-items {
+  position: absolute;
+  background-color: DodgerBlue;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+.custom-select .select-items div,
+.custom-select .select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0,0,0,0.1) transparent;
+  cursor: pointer;
+}
+.custom-select .select-items div:hover,
+.custom-select .same-as-selected {
+  background-color: rgba(0,0,0,0.1);
+}
+.custom-select .select-hide {
+  display: none;
 }
 body {
   font-family: "Montserrat", sans-serif;

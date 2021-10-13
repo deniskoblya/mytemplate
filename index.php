@@ -1,4 +1,4 @@
-<?php	
+<?php // этот php-код компилирует less/style.less в css/style.css	
 	require "./assets/less/lessc.inc.php";	
 	function autoCompileLess($inputFile, $outputFile) {
 	  // load the cache
@@ -20,19 +20,27 @@
 ?>
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
     <meta http-equiv="content-type" content="text/html; charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!--<meta name="viewport" content="width=1300px">-->
+    <!--<meta name="viewport" content="width=1200px">-->
+
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<!--<link rel="apple-touch-icon" href="ссылка на фавикон для apple">
+	<link rel="apple-touch-icon" sizes="72x72" href="ссылка на фавикон для apple">
+	<link rel="apple-touch-icon" sizes="114x114" href="ссылка на фавикон для apple"> -->
+    
+	<!-- <meta property="og:image" content="ссылка на картинку для превью"> -->
     <link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
 </head>
 
 <body>
     <div class="wrapper">
         <div id="mobile-menu">
-            <div class="block">
+            <div class="block df">
                 <ul>
                     <li><a href=""><span>Link</span></a></li>
                     <li><a href=""><span>Link</span></a></li>
@@ -54,13 +62,13 @@
                             <div class="box box_item2"></div>
                             <div class="box box_item3"></div>
                         </button>
-                    </div>
+                    </div>                    
                 </div>
             </div>
         </header>
         <section class="sec1">
             <div class="container">
-
+               
             </div>
         </section>
         <section class="sec2">
@@ -80,32 +88,10 @@
         </section>
         <section class="sec5">
             <div class="container">
-                
+
             </div>
         </section>
-        <section class="help">
-            <div class="container">
-                <div class="tabs">
-                    <ul class="tabs__caption">
-                        <li class="tabs__item active">Таб 1</li>
-                        <li class="tabs__item">Таб 2</li>
-                        <li class="tabs__item">Таб 3</li>
-                    </ul>
-                    <div class="tabs__content active">
-                        Контент 1 таба
-                    </div>
-                    <div class="tabs__content">
-                        Контент 2 таба
-                    </div>
-                    <div class="tabs__content">
-                        Контент 3 таба
-                    </div>
-                </div>
-                <hr>
-                <button class="md-trigger" data-modal="modal-1">Модальное окно</button>
-                <hr>
-            </div>
-        </section>
+       
         <footer>
             <div class="container">
                 <p>footer</p>

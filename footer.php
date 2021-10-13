@@ -1,4 +1,4 @@
-<link rel="stylesheet" href="./assets/css/animate.css" type="text/css" />
+    <link rel="stylesheet" href="./assets/css/animate.css" type="text/css" />
     <!-- FOR MODAL -->
     <script src="./assets/js/classie.js"></script>
     <script src="./assets/js/modalEffects.js"></script>
