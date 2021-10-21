@@ -136,6 +136,22 @@ for (let index = 0; index < tabs.length; index++) {
 
 // ---------------------------------------------------------------------
 
+// const windowInnerWidth = window.innerWidth;
+
+// if (windowInnerWidth >= 768) {
+//   console.log(windowInnerWidth + 'больше 768')
+// } else {
+//   console.log(windowInnerWidth + 'меньше 768')
+// }
+
+// window.addEventListener('resize', function (event) {
+//   const windowInnerWidth = window.innerWidth;
+//   if (windowInnerWidth >= 768) {
+//     console.log(windowInnerWidth + 'больше 768')
+//   } else {
+//     console.log(windowInnerWidth + 'меньше 768')
+//   }
+// });
 
 
 // ---------------------------------------------------------------------
