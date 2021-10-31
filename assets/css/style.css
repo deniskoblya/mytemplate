@@ -929,10 +929,10 @@ input:focus:-ms-input-placeholder {
   width: 10px;
 }
 ::-webkit-scrollbar-track {
-  background: #188642;
+  background: white;
 }
 ::-webkit-scrollbar-thumb {
-  background: #772121;
+  background: grey;
 }
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
@@ -970,6 +970,17 @@ input:focus:-ms-input-placeholder {
 }
 .center {
   text-align: center;
+}
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+.fade {
+  animation: opacity 1s;
 }
 .anim {
   -webkit-transition: 0.3s all ease;
@@ -1020,10 +1031,25 @@ input:focus:-ms-input-placeholder {
   -ms-flex-pack: center;
   justify-content: center;
 }
-.tabs__content {
+.tabs >div {
   display: none;
+  animation: opacity 1s;
 }
-.tabs__content.active {
+.tabs >div.active {
+  display: block;
+}
+.accordeon__line {
+  background-color: green;
+  color: white;
+  padding: 10px;
+}
+.accordeon__content {
+  background-color: burlywood;
+  padding: 10px;
+  display: none;
+  animation: opacity 1s;
+}
+.accordeon__content.active {
   display: block;
 }
 .hflip {

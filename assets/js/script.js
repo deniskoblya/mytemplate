@@ -105,31 +105,84 @@ document.addEventListener("click", closeAllSelect);
 
 
 
-// начало скрипт табов //
+// начало скрипт аккордеона
 
-let tabs = document.querySelectorAll(".tabs");
-for (let index = 0; index < tabs.length; index++) {
-  let tab = tabs[index];
+let accordeon = document.querySelectorAll('.accordeon');
 
-  let tabs_items = tab.querySelectorAll(".tabs__item");
-  let tabs_blocks = tab.querySelectorAll(".tabs__content");
+accordeon.forEach(element => {
+  let aLine = element.querySelectorAll('.accordeon__line');
+  let aContent = element.querySelectorAll('.accordeon__content');
 
-  for (let index = 0; index < tabs_items.length; index++) {
-    let tabs_item = tabs_items[index];
-    tabs_item.addEventListener("click", function (e) {
+  accordeonHideContent();
+  accordeonShowContent();
 
-      for (let index = 0; index < tabs_items.length; index++) {
-        let tabs_item = tabs_items[index];
-        tabs_item.classList.remove('active');
-        tabs_blocks[index].classList.remove('active');
-      }
+  element.addEventListener('click', function (e) {
+    if (e.target && e.target.classList.contains('accordeon__line')) {
+      aLine.forEach((element, i) => {
+        if (e.target == element) {
+          accordeonHideContent();
+          accordeonShowContent(i);
+        }
+      });
+    }
+  });
 
-      tabs_item.classList.add('active');
-      tabs_blocks[index].classList.add('active');
-      e.preventDefault();
+  function accordeonHideContent() {
+    aLine.forEach(element => {
+      element.classList.remove('active');
+    });
+    aContent.forEach(element => {
+      element.classList.remove('active');
     });
   }
-}
+
+  function accordeonShowContent(i = 0) {
+    aLine[i].classList.add('active');
+    aContent[i].classList.add('active');
+  }
+});
+
+// конец скрипт аккордеона
+
+
+// начало скрипт табов //
+
+let tabBlock = document.querySelectorAll('.tabs');
+
+tabBlock.forEach(element => {
+  let tabsParent = element.querySelector('ul');
+  let tabs = tabsParent.querySelectorAll('li');
+  let tabsContent = element.querySelectorAll('div');
+
+  tabHideContent();
+  tabShowContent();
+
+  tabsParent.addEventListener('click', function (e) {
+    if (e.target) {
+      tabs.forEach((element, i) => {
+        if (e.target == element) {
+          tabHideContent();
+          tabShowContent(i);
+        }
+      });
+    }
+  });
+
+  function tabHideContent() {
+    tabs.forEach(element => {
+      element.classList.remove('active');
+    });
+
+    tabsContent.forEach(element => {
+      element.classList.remove('active');
+    });
+  }
+
+  function tabShowContent(i = 0) {
+    tabs[i].classList.add('active');
+    tabsContent[i].classList.add('active');
+  }
+});
 
 
 // конец скрипт табов //

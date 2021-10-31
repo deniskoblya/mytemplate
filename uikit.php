@@ -17,12 +17,13 @@
   <link rel="stylesheet" href="./assets/css/style.css" type="text/css" />
 
   <style>
-    .w50{
+    .w50 {
       border: 1px solid #dcd8d8;
       width: 50%;
       padding: 30px;
     }
-    .yellow{
+
+    .yellow {
       background: yellow;
       margin-bottom: 20px;
     }
@@ -80,7 +81,8 @@
             </div>
             <div class="w50">
               <p class="yellow">
-                Данный код будет преобразовывать select в div со всеми значениями option, стили проаисаны в <b>less/helpclass.less</b>
+                Данный код будет преобразовывать select в div со всеми значениями option, стили проаисаны в
+                <b>less/helpclass.less</b>
               </p>
               <div class="custom-select" style="width:200px;">
                 <select>
@@ -100,12 +102,12 @@
               <xmp>
 <div class="tabs">
   <ul class="tabs__caption">
-    <li class="tabs__item active">Таб 1</li>
+    <li class="tabs__item">Таб 1</li>
     <li class="tabs__item">Таб 2</li>
     <li class="tabs__item">Таб 3</li>
   </ul>
-  <div class="tabs__content active">
-    Контент 1 таба 
+  <div class="tabs__content">
+    Контент 1 таба
   </div>
   <div class="tabs__content">
     Контент 2 таба
@@ -118,19 +120,67 @@
             </div>
             <div class="w50">
               <div class="tabs">
-                <ul class="tabs__caption">
-                  <li class="tabs__item active">Таб 1</li>
+                <ul>
+                  <li class="tabs__item">Таб 1</li>
                   <li class="tabs__item">Таб 2</li>
                   <li class="tabs__item">Таб 3</li>
                 </ul>
-                <div class="tabs__content active">
-                  Контент 1 таба 
+                <div class="tabs__content">
+                  Контент 1 таба
                 </div>
                 <div class="tabs__content">
                   Контент 2 таба
                 </div>
                 <div class="tabs__content">
                   Контент 3 таба
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="df">
+            <div class="w50">
+              <xmp>
+<div class="accordeon">
+  <div class="accordeon__line">
+    Мой вопрос 1
+  </div>
+  <div class="accordeon__content">
+    Мой ответ 1
+  </div>
+  <div class="accordeon__line">
+    Мой вопрос 2
+  </div>
+  <div class="accordeon__content">
+    Мой ответ 2
+  </div>
+  <div class="accordeon__line">
+    Мой вопрос 3
+  </div>
+  <div class="accordeon__content">
+    Мой ответ 3
+  </div>
+</div>
+              </xmp>
+            </div>
+            <div class="w50">
+              <div class="accordeon">
+                <div class="accordeon__line">
+                  Мой вопрос 1
+                </div>
+                <div class="accordeon__content">
+                  Мой ответ 1
+                </div>
+                <div class="accordeon__line">
+                  Мой вопрос 2
+                </div>
+                <div class="accordeon__content">
+                  Мой ответ 2
+                </div>
+                <div class="accordeon__line">
+                  Мой вопрос 3
+                </div>
+                <div class="accordeon__content">
+                  Мой ответ 3
                 </div>
               </div>
             </div>
@@ -145,8 +195,10 @@
             </div>
             <div class="w50">
               <p class="yellow">
-                Модальные окна реализованы таким образом что каждое модально екно создается в файле <b>modal.php</b> у каждого модального окна
-                должен быть свой id, а кнопка которая его вызывает имеет в себе <b>data-modal="он равен идентификатору модального окна"</b> (смотри код слева) + класс <b>md-trigger</b>, как 
+                Модальные окна реализованы таким образом что каждое модально екно создается в файле <b>modal.php</b> у
+                каждого модального окна
+                должен быть свой id, а кнопка которая его вызывает имеет в себе <b>data-modal="он равен идентификатору
+                  модального окна"</b> (смотри код слева) + класс <b>md-trigger</b>, как
                 строить окна читай далее в <b>modal.php</b>
               </p>
               <button class="md-trigger" data-modal="modal-1">Модальное окно</button>
@@ -161,14 +213,15 @@
               </xmp>
             </div>
             <div class="w50">
-              <p class="yellow">Для слайда к определенной секции должен быть класс scroll, а в data-target указан тот класс к которому должно слайдить</p>
+              <p class="yellow">Для слайда к определенной секции должен быть класс scroll, а в data-target указан тот
+                класс к которому должно слайдить</p>
               <a href="#" class="scroll" data-target=".wrapper">Slide</a>
             </div>
           </div>
           <div class="df">
             <div class="w50">
               <xmp>
-код
+                код
               </xmp>
             </div>
             <div class="w50">
@@ -179,7 +232,7 @@
           <div class="df">
             <div class="w50">
               <xmp>
-код
+                код
               </xmp>
             </div>
             <div class="w50">
@@ -190,7 +243,7 @@
           <div class="df">
             <div class="w50">
               <xmp>
-код
+                код
               </xmp>
             </div>
             <div class="w50">
@@ -201,7 +254,7 @@
           <div class="df">
             <div class="w50">
               <xmp>
-код
+                код
               </xmp>
             </div>
             <div class="w50">
@@ -212,7 +265,7 @@
           <div class="df">
             <div class="w50">
               <xmp>
-код
+                код
               </xmp>
             </div>
             <div class="w50">
@@ -223,18 +276,7 @@
           <div class="df">
             <div class="w50">
               <xmp>
-код
-              </xmp>
-            </div>
-            <div class="w50">
-              результат
-            </div>
-          </div>
-
-          <div class="df">
-            <div class="w50">
-              <xmp>
-код
+                код
               </xmp>
             </div>
             <div class="w50">

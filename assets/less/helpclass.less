@@ -134,6 +134,19 @@
   text-align: center;
 }
 
+@keyframes opacity {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.fade {
+  animation: opacity 1s;
+}
 
 .anim {
   -webkit-transition: 0.3s all ease;
@@ -184,12 +197,38 @@
 }
 
 
-.tabs__content {
-  display: none;
+.tabs {
+  >div {
+    display: none;
+    .fade;
 
-  &.active {
-    display: block;
+    &.active {
+      display: block;
+    }
   }
+}
+
+
+
+
+.accordeon {
+  &__line {
+    background-color: green;
+    color: white;
+    padding: 10px;
+  }
+
+  &__content {
+    background-color: burlywood;
+    padding: 10px;
+    display: none;
+    .fade;
+
+    &.active {
+      display: block;
+    }
+  }
+
 }
 
 .hflip {
